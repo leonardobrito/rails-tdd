@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-describe 'Matchers comparations' do
+describe 'Matchers equality' do
   # ruby 3.1.3 puts x and y at the same memory address,
   # because of this the condition below works
   it '#equal object' do
