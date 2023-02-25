@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'calculator'
-describe Calculator do
+RSpec.describe Calculator, 'About calculator' do
   context '#sum' do
     it 'with positive numbers' do
       expect(subject.sum(5, 7)).to eq(12)
