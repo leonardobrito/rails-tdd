@@ -15,4 +15,14 @@ describe Calculator do
       expect(subject.sum(-5, 7)).to eq(2)
     end
   end
+
+  context '#div' do
+    it 'by zero' do
+      # expect { subject.div(5, 0) }.to raise_exception  // Too generic error, avoid using like this
+      expect { subject.div(5, 0) }.to raise_error(ZeroDivisionError)
+      expect { subject.div(5, 0) }.to raise_error('divided by 0')
+      expect { subject.div(5, 0) }.to raise_error(ZeroDivisionError, 'divided by 0')
+      expect { subject.div(5, 0) }.to raise_error(/divided/) # regex
+    end
+  end
 end
